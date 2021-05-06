@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
   // be sure to include its associated Product data
   try {
     const tagData = await Tag.findAll({
-      attributes: ['tag_name'],
+      // attributes: ['tag_name'],
       include: [
         {
           model: Product,
@@ -59,6 +59,7 @@ router.post('/', async (req, res) => {
   }
 });
 
+// UPDATE TAG not working correctly.
 router.put('/:id', async (req, res) => {
   // update a tag's name by its `id` value
   try {
