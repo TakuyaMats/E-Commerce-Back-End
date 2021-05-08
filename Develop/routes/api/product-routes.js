@@ -155,7 +155,7 @@ router.put('/:id', async (req, res) => {
 // NOT WORKING PROPERLY.
 router.delete('/:id', async (req, res) => {
   // delete one product by its `id` value
-    Product.destroy(req.body, {
+    Product.destroy({
       where: {
         id: req.params.id,
       },
